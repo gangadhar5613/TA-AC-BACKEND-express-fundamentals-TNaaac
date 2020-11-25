@@ -10,7 +10,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
-app.use((req,res,next) => {
+app.use('/about',(req,res,next) => {
     console.log(req.cookies);
     res.cookie("username","hello");
     next();
